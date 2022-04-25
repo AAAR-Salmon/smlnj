@@ -13,4 +13,5 @@ COPY --from=builder /usr/local/smlnj/lib /usr/local/smlnj/lib
 ENV SMLNJ_HOME=/usr/local/smlnj
 # install i386 glibc
 RUN dpkg --add-architecture i386 && apt-get update && apt-get install -y libc6:i386
+WORKDIR /root
 ENTRYPOINT ["/usr/local/smlnj/bin/sml"]
