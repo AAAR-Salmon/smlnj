@@ -7,12 +7,12 @@
 SML/NJインタプリタを起動する場合
 
 ```sh
-docker run -it --rm aaarsalmon/smlnj:11085
+docker run -it --rm aaarsalmon/smlnj
 ```
 
 SML/NJインタプリタを起動し，
-カレントディレクトリ以下 `some/functions.sml` ファイルをロードする場合
+カレントディレクトリ以下のファイル `./some/functions.sml` をロードする場合
 
 ```sh
-docker run -it --rm -v $(pwd):/root aaarsalmon/smlnj:11085 some/functions.sml
+docker run -it --rm -v $(pwd):/root aaarsalmon/smlnj some/functions.sml
 ```
